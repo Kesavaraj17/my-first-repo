@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First project</title>
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <div class="container">
+        <header>
+            <h1>Resume Builder</h1>
+            <p>Create your professional resume easily</p>
+        </header>
+        <main>
+            <form class="resume-form">
+                <section class="section">
+                    <h2>Personal Information</h2>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </section>
+                <section class="section">
+                    <h2>Education</h2>
+                    <div class="form-group">
+                        <label for="degree">Degree</label>
+                        <input type="text" id="degree" name="degree" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="school">School/College</label>
+                        <input type="text" id="school" name="school" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year of Graduation</label>
+                        <input type="text" id="year" name="year" required>
+                    </div>
+                </section>
+                <section class="section">
+                    <h2>Experience</h2>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <input type="text" id="role" name="role">
+                    </div>
+                    <div class="form-group">
+                        <label for="exp-years">Years</label>
+                        <input type="text" id="exp-years" name="exp-years">
+                    </div>
+                </section>
+                <section class="section">
+                    <h2>Skills</h2>
+                    <div class="form-group">
+                        <label for="skills">Skills</label>
+                        <input type="text" id="skills" name="skills" placeholder="e.g. JavaScript, HTML, CSS">
+                    </div>
+                </section>
+                <button type="submit" class="submit-btn">Build Resume</button>
+            </form>
+        </main>
+        <footer>
+            <p>&copy; 2025 Resume Builder. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
