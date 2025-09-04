@@ -1,42 +1,42 @@
 /* Responsive Resume Builder Styles */
 .center-content {
     min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    margin: 40px auto;
-    max-width: 600px;
-    padding: 32px 16px;
-}
-.center-content h1 {
-    font-size: 2.2rem;
-    color: #2a7ae2;
-    margin-bottom: 12px;
-}
-.catchy {
-    font-size: 1.15rem;
-    color: #444;
-    margin-bottom: 28px;
-}
-.action-btn {
-    display: inline-block;
-    background: #2a7ae2;
-    color: #fff;
-    text-decoration: none;
-    padding: 14px 36px;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    box-shadow: 0 1px 4px rgba(42,122,226,0.12);
-    transition: background 0.2s, box-shadow 0.2s;
-}
-.action-btn:hover {
-    background: #1d5bbf;
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+        background: rgba(0,0,0,0.35);
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.5s cubic-bezier(.4,0,.2,1);
+    }
+    .modal.show {
+        display: flex;
+        opacity: 1;
+    }
+    .modal-content {
+        background: #fff;
+        margin: 10% auto;
+        padding: 32px 24px;
+        border-radius: 8px;
+        max-width: 350px;
+        text-align: center;
+        box-shadow: 0 2px 12px rgba(42,122,226,0.12);
+        position: relative;
+        transform: translateY(-40px) scale(0.98);
+        opacity: 0;
+        transition: transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);
+    }
+    .modal.show .modal-content {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
     box-shadow: 0 2px 8px rgba(42,122,226,0.18);
 }
 body {
@@ -146,7 +146,7 @@ footer {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.5s ease;
 }
 .modal.show {
     display: flex;
